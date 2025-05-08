@@ -1,3 +1,8 @@
+Flowchart that represents the core drone decision-making process based on environment, beacon detection, and pilot authorization:
+
+
+
+
 +--------------------------+
 | Start (Power On)        |
 +-----------+--------------+
