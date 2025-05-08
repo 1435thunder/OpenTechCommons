@@ -1,3 +1,25 @@
+<div align="center">
+
+███████╗ ██████╗ ███████╗███╗ ██╗████████╗ ██████╗ ██████╗ ███████╗███╗ ███╗
+██╔════╝██╔═══██╗██╔════╝████╗ ██║╚══██╔══╝██╔════╝ ██╔══██╗██╔════╝████╗ ████║
+█████╗ ██║ ██║█████╗ ██╔██╗ ██║ ██║ ██║ ███╗██████╔╝█████╗ ██╔████╔██║
+██╔══╝ ██║ ██║██╔══╝ ██║╚██╗██║ ██║ ██║ ██║██╔══██╗██╔══╝ ██║╚██╔╝██║
+██║ ╚██████╔╝███████╗██║ ╚████║ ██║ ╚██████╔╝██║ ██║███████╗██║ ╚═╝ ██║
+╚═╝ ╚═════╝ ╚══════╝╚═╝ ╚═══╝ ╚═╝ ╚═════╝ ╚═╝ ╚═╝╚══════╝╚═╝ ╚═╝
+
+
+<h3>🚙 Recycled Motors. ⚡ Open Systems. ☀️ Solar Futures.</h3>
+
+[![](https://img.shields.io/badge/platform-ESP32%20%7C%20Raspberry%20Pi%20%7C%20Arduino-blue)](https://github.com/1435thunder/OpenTechCommons/)
+[![](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![](https://img.shields.io/badge/project-status%3A%20WIP-yellow)]()
+[![](https://img.shields.io/badge/powered%20by-community%20%26%20creativity-orange)]()
+[![](https://img.shields.io/github/last-commit/1435thunder/OpenTechCommons)](https://github.com/1435thunder/OpenTechCommons/commits/main)
+
+</div>
+
+---
+
 # OpenTechCommons
 
 **OpenTechCommons** is a collaborative knowledge bank and development lab for decentralized, solar-electric, and hybrid vehicle conversions — using open-source hardware, recycled industrial motors, solar integration, and microcontroller systems like ESP32, Raspberry Pi, and Arduino.
