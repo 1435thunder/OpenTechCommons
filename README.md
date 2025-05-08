@@ -1,77 +1,56 @@
 # OpenTechCommons
-Open-source knowledge bank for anything tech EV conversions, solar mobility, and industrial motor repurposing, Esp32, Drones.
 
-# ⚡ OpenTechCommons
+**OpenTechCommons** is a collaborative knowledge bank and development lab for decentralized, solar-electric, and hybrid vehicle conversions — using open-source hardware, recycled industrial motors, solar integration, and microcontroller systems like ESP32, Raspberry Pi, and Arduino.
 
-**Empowering Individuals Through Open-Source Engineering, Repurposed Tech, and Practical Autonomy**
-
-Welcome to the OpenTechCommons — a living library of applied innovation, enabling people to take back control of transport, energy, and infrastructure using open-source tools, recycled materials, and grassroots know-how.
+Our goal is to **empower people, makers, and small communities** with viable tools and knowledge to transition away from high-cost, unsustainable transport — one motor at a time.
 
 ---
 
-## 🌱 Mission
+## 🌍 Mission
 
-We believe the future should be built by individuals, not monopolies. Our mission is to document, prototype, and share real-world, replicable systems that help ordinary people:
+We believe:
 
-- Convert vehicles from fossil to solar/electric power
-- Reuse industrial motors and gearboxes for functional, eco-resilient transport
-- Develop decentralized energy and navigation systems
-- Build the foundations of a distributed DIY infrastructure movement
-
----
-
-## 🛠️ Project Categories
-
-### 🚗 EV Conversions & Retrofits
-- VFD/ESP32 motor controllers for ex-industrial motors
-- Hybrid switching systems (solar ↔ battery ↔ petrol)
-- Prius component repurposing and control hacks
-
-### ☀️ Energy Autonomy
-- Solar-powered direct-drive aircon and pumping
-- LiFePO4 battery pack designs (200V systems and beyond)
-- Smart relays and soft-start systems without battery banks
-
-### 🛰️ Decentralized Navigation & Drones
-- ESP32 mesh networking for autonomous drone comms
-- Legal-safe anti-geofencing navigation tools
-- Peer-based navigation frameworks (no GPS required)
-
-### 🔧 Infrastructure Repurposing & Policy
-- Motor reclamation policy ideas
-- Industry disruption via repairability and reuse
-- Proposals for a national motor reconditioning initiative
+- **Recycling is the new manufacturing**
+- **Decentralized systems build resilient communities**
+- **Industrial waste is industrial opportunity**
+- **Access to knowledge should be free**
 
 ---
 
-## 🧑‍💻 Who It's For
+## 📦 Project Structure
 
-- Tinkerers, makers, and garage engineers
-- Sustainable transport advocates
-- EV modders and off-grid tech enthusiasts
-- Dronists, hobbyists, and civil rights defenders
-- Visionaries and entrepeneurs who want to *build better, not wait longer*
-
----
-
-## 🤝 How to Contribute
-
-1. Fork this repo and add your project, notes, or experiments.
-2. Submit issues or ideas you want to brainstorm or document.
-3. Join the knowledge loop — share what you learn.
+- [`docs/`](docs): Whitepapers, conceptual designs, and long-form technical writing  
+- [`solar-drive/`](solar-drive): Solar-powered vehicle system concepts, wiring diagrams, VFD control logic  
+- [`circuits/`](circuits): EV component interfacing, soft-start VFD logic, safety and sensor integration  
+- [`code/`](code): Scripts and microcontroller code for motor control, relay switching, and GUI presets  
+- [`hardware/`](hardware): Motor retrofit guides, battery system builds, enclosure specs, materials sourcing  
 
 ---
 
-## 💬 Community Ethos
+## 💡 Highlights
 
-This isn't just about invention — it’s about **independence**.  
-We believe in a future where:
-- Ownership means repairability  
-- Waste becomes a resource  
-- Information is a tool, not a gatekeeper  
-- Energy is abundant when design is efficient  
-
-Let’s build systems that serve people — not just markets.
+- EV conversions using **recycled industrial 3-phase motors**
+- VFD motor control with **soft-start logic and user presets**
+- **Hybrid switchovers** between petrol, battery, and solar
+- Direct solar drive without battery using pump inverter logic
+- ESP32 touchscreen interface for driving modes (Sport, Eco, Cruise, etc.)
 
 ---
+
+## 🤝 Contributing
+
+Got experience in electronics, automation, EVs, or sustainable tech?  
+Pull requests, discussions, and open issues are welcome.  
+Let’s build the future *before* we’re forced to.
+
+---
+
+## ⚡ License
+
+This work is shared under the [MIT License](LICENSE) — open for use, modification, and repurposing for good.
+
+---
+
+**🧠 Ideas are only wasted if left unrealized.**  
+Join us at OpenTechCommons and help bring practical innovation to the streets.
 
