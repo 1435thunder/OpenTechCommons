@@ -1,1 +1,49 @@
+// ASCII Wiring Diagram - ESP32-WROVER (DEVKITC) Drone Core
+// Modules: VTX, GPS, LoRa SX1262, IMU, ESCs, Servos, Camera, Power
+
+
+          [ LIPO BATTERY 3S/4S ]
+                   |
+       +-----------+-----------+
+       |                       |
+   [5V BEC]               [PDB w/ XT60]
+       |                       |
+    +-+--+              +------+------+
+    |    |              |             |
+ [ESC] [ESC]      [ESP32-WROVER DEVKITC]   <--- MAIN CPU (8MB PSRAM)
+   |     |            +--+-----------+--+
+ [M1]  [M2]           |               |
+                     |               |
+                     |          [LoRa SX1262]
+                     |            (SPI - 18/19/23/5)
+                     |
+              [IMU - MPU6050 / MPU9250]
+                  (I2C - 21/22)
+                     |
+              [GPS - Ublox NEO-6M/8M]
+                (UART - RX/TX)
+                     |
+             [FPV CAM - ESP32-CAM or OSD]
+                 (CAM XCLK / PCLK / etc.)
+                     |
+             [Analog VTX - 5.8GHz]
+                (Connected to cam out)
+                     |
+             [Servos - Rudder, Elevons, etc.]
+                (PWM GPIO 13/14/15)
+
+Notes:
+- PDB = Power Distribution Board
+- ESC = Electronic Speed Controller
+- SX1262 requires level shifting or verified 3.3v logic
+- Antennas (LoRa, VTX, GPS) should be routed away from each other
+- Can add MicroSD via SPI for logging if needed
+
+Optional Add-ons:
+- [OLED Screen or LED indicators for status on GPIOs]
+- [Buzzer - GPIO with PWM for audible alerts]
+- [Barometer - BMP280 on I2C bus]
+
+---
+Would you like the breadboard component layout next?
 
