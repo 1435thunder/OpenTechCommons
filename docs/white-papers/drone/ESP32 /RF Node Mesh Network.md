@@ -19,6 +19,11 @@ The main objectives of the ESP32/RF node mesh system are:
 
 * **ESP32 Microcontroller**: The main control unit, responsible for local data acquisition, communication, and minimal edge processing.
 * **LoRa/ExpressLRS RF Modules** (e.g., SX1276 or Gemini X): Used for long-range data communication and mesh routing.
+* **Optional Long-Range RF Integration**:
+
+  * **Repurposed 433MHz Kids’ Two-Way Radios**: Up to 30km range, modifiable for UART integration.
+  * **915MHz MAVLink-Compatible UAV Telemetry Radios**: Full-duplex serial communication using adaptive TDM, SIK firmware, USB/UART compatibility.
+  * **DRA818V VHF HAM Module**: Configurable 134–174MHz band, +30dBm output, -122dBm sensitivity, UART interface for voice or serial data relay.
 * **Sensors (modular)**: Including TDS, RTD, soil moisture, temperature, humidity, solar irradiance, and motion detectors.
 * **Power Module**: Typically a solar-rechargeable battery system, optionally with a supercapacitor buffer.
 * **Enclosure**: Weather-resistant casing with considerations for modular mounting (e.g., PVC pipe-based frame).
@@ -83,6 +88,7 @@ The main objectives of the ESP32/RF node mesh system are:
 
 * ESP32 (or Raspberry Pi for larger setups)
 * LoRa Receiver
+* Long-range telemetry radio (optional 433/915 MHz)
 * Wi-Fi / Ethernet module
 * Local data storage (microSD or USB SSD)
 * Optional: OLED display, MQTT broker for integration
@@ -101,8 +107,8 @@ The main objectives of the ESP32/RF node mesh system are:
 * Integration with UAVs or fixed-wing drones.
 * Visual dashboard (Grafana or Node-RED).
 * AI edge processing for visual/auditory anomaly detection.
+* Legal-band long-range mesh adaptation (custom firmware for DRA818V or MAVLink radios).
 
 ## 9. Conclusion
 
 This ESP32/RF node mesh concept represents a powerful approach to enabling low-cost, long-range, and flexible IoT deployments in agricultural and remote monitoring domains. With modular design and scalable implementation, it serves as a foundation for innovation, sustainability, and resilience in decentralized data infrastructure.
-
