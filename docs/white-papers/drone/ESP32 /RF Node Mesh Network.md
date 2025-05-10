@@ -19,11 +19,6 @@ The main objectives of the ESP32/RF node mesh system are:
 
 * **ESP32 Microcontroller**: The main control unit, responsible for local data acquisition, communication, and minimal edge processing.
 * **LoRa/ExpressLRS RF Modules** (e.g., SX1276 or Gemini X): Used for long-range data communication and mesh routing.
-* **Optional Long-Range RF Integration**:
-
-  * **Repurposed 433MHz Kids’ Two-Way Radios**: Up to 30km range, modifiable for UART integration.
-  * **915MHz MAVLink-Compatible UAV Telemetry Radios**: Full-duplex serial communication using adaptive TDM, SIK firmware, USB/UART compatibility.
-  * **DRA818V VHF HAM Module**: Configurable 134–174MHz band, +30dBm output, -122dBm sensitivity, UART interface for voice or serial data relay.
 * **Sensors (modular)**: Including TDS, RTD, soil moisture, temperature, humidity, solar irradiance, and motion detectors.
 * **Power Module**: Typically a solar-rechargeable battery system, optionally with a supercapacitor buffer.
 * **Enclosure**: Weather-resistant casing with considerations for modular mounting (e.g., PVC pipe-based frame).
@@ -33,6 +28,24 @@ The main objectives of the ESP32/RF node mesh system are:
 * **Mesh Networking**: Implemented using LoRa or ELRS on custom protocols, supporting multi-hop routing and autonomous node behavior.
 * **Gateway/Base Station**: Centralized ESP32 or Raspberry Pi-based unit with RF receiver and data aggregation/storage via Wi-Fi or Ethernet.
 * **Optional Redundancy**: Secondary RF channel or cellular fallback (e.g., SIM800L) for out-of-range event data.
+
+### 3.3 UAV-Integrated Telemetry Expansion
+
+* **Flight Controller (e.g., Ardupilot or INAV)**: Accepts telemetry data from ESP32 and forwards it through MAVLink or custom protocol.
+* **Video Transmitter (VTX)**: Used to transmit both live video and embedded telemetry from remote locations (100km+ range possible).
+* **ESP32 Interface**: Communicates via UART with flight controller to inject telemetry data.
+
+**Data Flow:**
+
+```text
+[ESP32 Sensor Node] → [Flight Controller] → [Telemetry + Video via VTX] → [Ground Station / Receiver]
+```
+
+**Use Cases:**
+
+* Permanent VTX-based stations at water troughs transmitting live clarity feed + TDS/temp values.
+* Drone flybys where ESP32 transmits telemetry upon FC handshake.
+* Telemetry-over-audio (SmartAudio, CRSF) for analog setups; MAVLink injection for digital.
 
 ## 4. Node Functional Design
 
@@ -48,6 +61,7 @@ The main objectives of the ESP32/RF node mesh system are:
 * **Water Trough Clarity Camera Arm**: Servo-rotated underwater camera with AI image processing.
 * **Bird/Wildlife Monitor**: Motion-triggered camera or alarm system.
 * **PID Auto-Tuner Node**: For environmental control systems.
+* **UAV-Compatible Telemetry Nodes**: Modular ESP32 units wired to UAV flight controller and/or VTX system.
 
 ## 5. Assembly and Wiring Diagram
 
@@ -65,6 +79,7 @@ The main objectives of the ESP32/RF node mesh system are:
  |--[DHT22 / TDS / RTD Sensor]
  |--[TP4056 + 18650 Battery Power System]
  |--[Optional: SG90 Servo / Camera / Light Sensor]
+ |--[Optional UART] → [Flight Controller] → [VTX / Telemetry System]
 ```
 
 ## 6. Agricultural Network Example
@@ -74,6 +89,7 @@ The main objectives of the ESP32/RF node mesh system are:
 * 20-hectare mixed-use farmland.
 * 5 sensor nodes: 2 soil stations (moisture, TDS), 1 livestock trough camera unit, 1 perimeter wildlife alert unit, 1 weather pole (light/temp/humidity).
 * 1 base station with omnidirectional antenna.
+* Optional: 2 UAV-compatible nodes using VTX + FC integration for distant water tanks.
 
 **Node Roles:**
 
@@ -81,6 +97,7 @@ The main objectives of the ESP32/RF node mesh system are:
 * Livestock presence triggers camera scan and water quality analysis.
 * Wildlife detection triggers alarm and sends event packet.
 * Base station aggregates and logs data locally (e.g., SD card or Pi database) and uploads via Wi-Fi.
+* UAV passes can trigger live data capture and video feed relay via airborne receiver.
 
 ## 7. Base Station Design
 
@@ -88,10 +105,10 @@ The main objectives of the ESP32/RF node mesh system are:
 
 * ESP32 (or Raspberry Pi for larger setups)
 * LoRa Receiver
-* Long-range telemetry radio (optional 433/915 MHz)
 * Wi-Fi / Ethernet module
 * Local data storage (microSD or USB SSD)
 * Optional: OLED display, MQTT broker for integration
+* Optional: VTX receiver for UAV video/telemetry
 
 **Function:** Acts as network root, time sync master, and MQTT or REST relay to external systems.
 
@@ -107,8 +124,9 @@ The main objectives of the ESP32/RF node mesh system are:
 * Integration with UAVs or fixed-wing drones.
 * Visual dashboard (Grafana or Node-RED).
 * AI edge processing for visual/auditory anomaly detection.
-* Legal-band long-range mesh adaptation (custom firmware for DRA818V or MAVLink radios).
+* LoRa-to-Starlink/5G bridge via base station.
+* Deployment of long-range VTX ground stations for livestock range monitoring.
 
 ## 9. Conclusion
 
-This ESP32/RF node mesh concept represents a powerful approach to enabling low-cost, long-range, and flexible IoT deployments in agricultural and remote monitoring domains. With modular design and scalable implementation, it serves as a foundation for innovation, sustainability, and resilience in decentralized data infrastructure.
+This ESP32/RF node mesh concept represents a powerful approach to enabling low-cost, long-range, and flexible IoT deployments in agricultural and remote monitoring domains. With modular design and scalable implementation, it serves as a foundation for innovation, sustainability, and resilience in decentralized data infrastructure, especially when augmented with UAV flight controllers and VTX-based telemetry systems for extreme-range applications.
