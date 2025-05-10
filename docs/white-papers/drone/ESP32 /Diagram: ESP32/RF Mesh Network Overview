@@ -1,1 +1,51 @@
+                          +------------------+
+                          |   Remote Access  |
+                          | (Wi-Fi/Internet) |
+                          +--------+---------+
+                                   |
+                            [ Wi-Fi / MQTT ]
+                                   |
+                          +--------v---------+
+                          |   Base Station   |
+                          | (ESP32 / Pi)     |
+                          | - LoRa Receiver  |
+                          | - Data Logging   |
+                          | - Time Sync      |
+                          +--------+---------+
+                                   |
+                     +-------------+-------------+
+                     |             |             |
+             +-------v--+    +-----v----+   +----v-----+
+             | Node #1  |    | Node #2  |   | Node #3  |
+             | (Soil    |    | (Trough  |   | (Weather |
+             | Station) |    | Camera)  |   |  Pole)   |
+             +----------+    +----------+   +----------+
+                 |                 |              |
+      +----------+-----+     +-----+------+   +----+-----+
+      | Sensors:       |     | Servo +     |   | DHT22,   |
+      | - Moisture     |     | Camera Arm  |   | Light    |
+      | - TDS          |     | - Clarity AI|   | Sensor   |
+      +----------------+     +-------------+   +----------+
+                 |
+           +-----v-----+
+           |  LoRa RF  |
+           +-----------+
+                 |
+          (Mesh Communication)
+                 |
+           +-----+-----+
+           | Solar +   |
+           | TP4056 +  |
+           | 18650 Batt|
+           +-----------+
+
+Other Nodes:
+- Node #4 (Wildlife Alert Unit): Motion Sensor + Alarm
+- Node #5 (PID Auto-Tuner): Control Logic
+
+Notes:
+- All nodes use ESP32 + LoRa
+- Modular sensor support
+- Mesh allows multi-hop routing
+- Optional cellular fallback via SIM800L
 
