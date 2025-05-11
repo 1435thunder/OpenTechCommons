@@ -1,28 +1,28 @@
 ASCII system block diagram for the AERM (Autonomous Ecological Restoration Mode) Drone, showing how core subsystems integrate in your modular “smart drone wing motherboard” design:
 
                  [ AUTONOMOUS ECOLOGICAL RESTORATION DRONE SYSTEM ]
-+------------------------------------------------------------------------+
-|                        DRONE CONTROL STACK                             |
-|                                                                        |
-|   +--------------+   +-------------+    +-------------+                |
-|   | Flight Ctrl  |<--| IMU / Gyro  |    |  GPS (opt)  |                |
-|   |  (e.g. F7)   |   +-------------+    +-------------+                |
-|   +------+-------+                                                ▲    |
-|          |                                                        |    |
-|   +------v------+   +-------------+   +---------------+   +-------v---+|
-|   | ESCs & BLDC |-->|  Motors     |   | Solar in Wing |-->| Power Sys  ||
-|   | Motor Ctrl  |   +-------------+   +---------------+   | (LiPo/Solar)|
-|   +-------------+                                        +-------------+|
-+------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+|                        DRONE CONTROL STACK                               |
+|                                                                          |
+|   +--------------+   +-------------+    +-------------+                  |
+|   | Flight Ctrl  |<--| IMU / Gyro  |    |  GPS (opt)  |                  |
+|   |  (e.g. F7)   |   +-------------+    +-------------+                  |
+|   +------+-------+                                                ▲      |
+|          |                                                        |      |
+|   +------v------+   +-------------+   +---------------+   +-------v----+ |
+|   | ESCs & BLDC |-->|  Motors     |   | Solar in Wing |-->| Power Sys  | |
+|   | Motor Ctrl  |   +-------------+   +---------------+   | (LiPo/Solar) |
+|   +-------------+                                        +-------------+ |
++--------------------------------------------------------------------------+
            |                                                        ▲    
            v                                                        |    
 +------------------------------------------------------------------------+
 |                    SENSOR + ACTUATOR SYSTEM BUS                        |
 |                                                                        |
-|  +-------------+  +---------------+  +--------------+  +-------------+ |
-|  | Soil Moist. |  | Temp / Humid. |  | Light Sensor |  | Altimeter  | |
-|  +------+------+  +-------+-------+  +------+--------+  +------+------+
-|         v                  v                 v                  v     
+|  +-------------+  +---------------+  +--------------+  +------------+  |
+|  | Soil Moist. |  | Temp / Humid. |  | Light Sensor |  | Altimeter  |  |
+|  +------+------+  +-------+-------+  +------+--------+  +------+----+  |
+|         v                  v                 v                  v      |
 |   +----------------+  +------------------------------+   +------------+|
 |   |  Seed Hopper   |<-| Drop Dispenser (Servo/Rotary)|-->| Onboard Cam||
 |   +----------------+  +------------------------------+   +------------+|
@@ -30,11 +30,11 @@ ASCII system block diagram for the AERM (Autonomous Ecological Restoration Mode)
            |
            v
 +------------------------------------------------------------------------+
-|                    COMMUNICATION / TELEMETRY MODULES                  |
+|                    COMMUNICATION / TELEMETRY MODULES                   |
 |                                                                        |
 |  +--------------+   +----------------+   +--------------------------+  |
-|  | LoRa / ELRS  |<->|  Base Station  |<->| Optional VTX Video Link |  |
-|  | Mesh Module  |   |  or Ground Pi  |   | (Livestreaming Option)  |  |
+|  | LoRa / ELRS  |<->|  Base Station  |<->| Optional VTX Video Link |   |
+|  | Mesh Module  |   |  or Ground Pi  |   | (Livestreaming Option)  |   |
 |  +--------------+   +----------------+   +--------------------------+  |
 +------------------------------------------------------------------------+
 
