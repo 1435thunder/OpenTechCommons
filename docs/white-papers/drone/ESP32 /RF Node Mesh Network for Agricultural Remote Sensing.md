@@ -19,6 +19,7 @@ The main objectives of the ESP32/RF node mesh system are:
 
 * **ESP32 Microcontroller**: The main control unit, responsible for local data acquisition, communication, and minimal edge processing.
 * **LoRa/ExpressLRS RF Modules** (e.g., SX1276 or Gemini X): Used for long-range data communication and mesh routing.
+* **Optional Telemetry Radios**: In UAV applications, standard 915 MHz telemetry radios (e.g., HM-TRP or SiK-based systems) can directly relay data to the base station, reducing the need for a separate ESP32 + VHF combo.
 * **Sensors (modular)**: Including TDS, RTD, soil moisture, temperature, humidity, solar irradiance, and motion detectors.
 * **Power Module**: Typically a solar-rechargeable battery system, optionally with a supercapacitor buffer.
 * **Enclosure**: Weather-resistant casing with considerations for modular mounting (e.g., PVC pipe-based frame).
@@ -94,10 +95,10 @@ The main objectives of the ESP32/RF node mesh system are:
 To increase communication range up to 30–100+ km:
 
 * Repurpose **cheap 433 MHz two-way radios** with UART interfaces.
-* Use hobby UAV telemetry radios (e.g., 915 MHz full-duplex HM-TRP modules).
+* Use hobby UAV telemetry radios (e.g., 915 MHz full-duplex HM-TRP modules) to directly send telemetry to the base station — ideal for fixed-wing UAVs or drones.
 * Integrate **DRA818V VHF Ham Radio Modules** (134–174 MHz) for extended range and robust communication.
 * VTX modules for **live video streaming** from water tanks and troughs.
-* **Flight controllers** can relay ESP32 telemetry over MAVLink to ground stations.
+* **Flight controllers** can relay ESP32 telemetry over MAVLink to ground stations, removing the need for additional RF infrastructure.
 
 ## 9. PCB Design Integration Strategy
 
@@ -152,9 +153,12 @@ To optimize development and reduce wiring complexity:
 * AI edge processing for visual/auditory anomaly detection.
 * PCB layout toolchain: EasyEDA/OSHWHub ecosystem.
 * Carbon fiber circuit integration and UAV-optimized layouts.
+* Use of telemetry radios in UAVs to bypass ESP32 nodes when not needed.
 
 ## 11. Conclusion
 
 This ESP32/RF node mesh concept represents a powerful approach to enabling low-cost, long-range, and flexible IoT deployments in agricultural and remote monitoring domains. With modular design and scalable implementation, it serves as a foundation for innovation, sustainability, and resilience in decentralized data infrastructure.
+
+By also supporting standard telemetry radios and flight controllers, the system becomes more adaptable for fixed-wing UAV integration, allowing for simpler data relays in airborne deployments while preserving node-based mesh advantages on the ground.
 
 Open-source PCB repositories and modern manufacturing enable an evolution toward a fully integrated, ultra-lightweight, and intelligent sensing drone system.
