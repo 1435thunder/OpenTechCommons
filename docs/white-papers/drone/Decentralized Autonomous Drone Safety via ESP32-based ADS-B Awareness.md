@@ -1,4 +1,4 @@
-# White Paper: Decentralized Autonomous Drone Safety via ESP32-based ADS-B Awareness
+# Decentralized Autonomous Drone Safety via ESP32-based ADS-B Awareness
 
 **Title:** Decentralized Autonomous Drone Safety System Using ESP32 for Passive ADS-B Signal Awareness
 **Version:** Draft 0.1
