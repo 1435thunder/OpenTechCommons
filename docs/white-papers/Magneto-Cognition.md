@@ -1,3 +1,4 @@
+'''
 🧠 Magneto-Cognition
 Geomagnetic Dependence of Human Neurology in Deep Space Environments
 🔍 Abstract
@@ -113,3 +114,4 @@ Publish results in biofield research circles
 
         "Magnetoreception in mammals" – Journal of Comparative Neurology
 
+'''
