@@ -114,5 +114,5 @@ This work is published under the [MIT License](LICENSE). Contributions and forks
 
 ## Repository
 
-🔗 GitHub: [github.com/your-org/solar-tire-recycling](https://github.com/your-org/solar-tire-recycling)
+🔗 GitHub: [github.com/your-org/solar-tire-recycling](https://github.com/your-org/solar-tire-recycling)](https://github.com/1435thunder/OpenTechCommons/tree/main/docs/white-papers)
 
