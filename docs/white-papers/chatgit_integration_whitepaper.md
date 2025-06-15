@@ -37,15 +37,19 @@ It solves the problem of non-persistent, single-threaded chat histories and inst
 /saturn_project/
 ├── assets/
 │ └── textures/, models/, audio/, fonts/
+
 ├── scenes/
 │ ├── stages/
 │ ├── builds/
 │ └── presets/
+
 ├── renders/
 │ └── final/, previews/
+
 ├── docs/
 │ ├── chat-logs/
 │ └── white-papers/
+
 ├── cache/
 ├── scripts/
 └── .gitignore
