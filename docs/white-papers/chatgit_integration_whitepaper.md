@@ -35,6 +35,7 @@ It solves the problem of non-persistent, single-threaded chat histories and inst
 ## 📂 Recommended Folder Structure
 
 /saturn_project/
+
 ├── assets/
 │ └── textures/, models/, audio/, fonts/
 
