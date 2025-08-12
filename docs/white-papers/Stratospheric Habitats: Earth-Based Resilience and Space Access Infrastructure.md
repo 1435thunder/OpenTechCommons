@@ -94,7 +94,7 @@ Stratospheric habitats at **30km altitude** represent an optimal balance between
 This infrastructure creates a "planetary lifebelt" that ensures civilization continuity without abandoning Earth. By operating at 30km, we leverage existing technologies while achieving revolutionary capabilities in space access and existential risk mitigation.
 
 ## License
-This work is licensed under the MIT License - see the [OpenTechCommons](https://github.com/yourusername/OpenTechCommons](https://github.com/1435thunder/OpenTechCommons/edit/main/docs/white-papers)) repository for details.
+This work is licensed under the MIT License - see the [OpenTechCommons]([https://github.com/yourusername/OpenTechCommons](https://github.com/1435thunder/OpenTechCommons/edit/main/docs/white-papers)](https://github.com/1435thunder/OpenTechCommons/tree/main/docs/white-papers)) repository for details.
 
 ---
 
